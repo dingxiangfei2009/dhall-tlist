@@ -1,0 +1,2 @@
+  λ(l : ∀(K : Kind) → ./TList K)
+→ l Type (λ(h : Type) → λ(t : Type) → < L : h | R : t >) {}

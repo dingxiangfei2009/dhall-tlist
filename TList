@@ -1,0 +1,1 @@
+let Combinator = ./Combinator in λ(K : Kind) → Combinator K → K → K

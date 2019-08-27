@@ -1,0 +1,7 @@
+  λ(T : Type)
+→ λ(f : T → T)
+→ λ(x : ./../Union ./../nat/4)
+→ λ(t : T)
+→ merge
+  { L = λ(_ : {}) → t, R = λ(x : ./../Union ./../nat/3) → f (./3 T f x t) }
+  x

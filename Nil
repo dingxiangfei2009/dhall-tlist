@@ -1,0 +1,5 @@
+let Combinator = ./Combinator
+
+let TList = ./TList
+
+in  λ(K : Kind) → λ(c : Combinator K) → λ(n : K) → n

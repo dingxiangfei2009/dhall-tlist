@@ -1,0 +1,7 @@
+let _1 = ./1
+
+let Tail = ./../Tail
+
+let TList = ./../TList
+
+in  λ(t : ∀(K : Kind) → TList K) → Tail (_1 t)

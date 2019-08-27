@@ -1,0 +1,7 @@
+let _8 = ./8
+
+let Tail = ./../Tail
+
+let TList = ./../TList
+
+in  λ(t : ∀(K : Kind) → TList K) → Tail (_8 t)

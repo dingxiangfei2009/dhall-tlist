@@ -1,0 +1,19 @@
+let TList = ./TList
+
+let Cons = ./Cons
+
+let Union = ./Union
+
+in    λ(l : ∀(K : Kind) → TList K)
+	→ λ(H : Type)
+	→ λ(h : H)
+	→ λ(t : List (Union l))
+	→ let l_ = Cons (λ(_ : Kind) → H) l
+
+	  in    [ (Union l_).L h ]
+		  # List/fold
+			(Union l)
+			t
+			(List (Union l_))
+			(λ(a : Union l) → λ(t : List (Union l_)) → [ (Union l_).R a ] # t)
+			([] : List (Union l_))

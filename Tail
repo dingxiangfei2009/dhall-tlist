@@ -1,0 +1,19 @@
+let Combinator = ./Combinator
+
+let TList = ./TList
+
+in    λ(l : ∀(K : Kind) → TList K)
+	→ λ(K : Kind)
+	→ λ(c : Combinator K)
+	→ λ(n : K)
+	→ let c0 =
+			  λ(h : Type)
+			→ λ(t : Combinator K → K)
+			→ λ(g : Type → K → K)
+			→ g h (t c)
+
+	  let n0 = λ(t : Combinator K) → n
+
+	  let shift = λ(h : Type) → λ(t : K) → t
+
+	  in  l ((Type → K → K) → K) c0 n0 shift

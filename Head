@@ -1,0 +1,5 @@
+let Combinator = ./Combinator
+
+let TList = ./TList
+
+in  λ(l : ∀(K : Kind) → TList K) → l Type (λ(h : Type) → λ(t : Type) → h) {}
